@@ -95,7 +95,7 @@ export default function HomePage() {
             {/* Metrics Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
               <MetricCard
-                title="CPU yang Dimonitor"
+                title="Monitored CPU"
                 value={localMetrics.cpuCount}
                 status={isConnected ? "AIDA64" : "Mock Data"}
                 statusColor="blue"
@@ -104,7 +104,7 @@ export default function HomePage() {
               />
               
               <MetricCard
-                title="Suhu Ruangan Lab"
+                title="Lab Room Temperature"
                 value={`${localMetrics.roomTemp.toFixed(1)}°C`}
                 status={modbusConnected ? "SHT20" : "Simulated"}
                 statusColor={modbusConnected ? "green" : "orange"}
@@ -113,7 +113,7 @@ export default function HomePage() {
               />
               
               <MetricCard
-                title="Total Komputer"
+                title="Total Computer"
                 value={localMetrics.totalComputers}
                 status="Aktif"
                 statusColor="green"
@@ -122,7 +122,7 @@ export default function HomePage() {
               />
               
               <MetricCard
-                title="Suhu Tertinggi CPU"
+                title="Highest CPU Temperature"
                 value={`${localMetrics.maxCpuTemp.toFixed(1)}°C`}
                 status={isConnected ? "AIDA64" : "CPU-03"}
                 statusColor="red"
